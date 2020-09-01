@@ -19,7 +19,6 @@ export class HomeComponent implements OnInit {
   public isLoggedIn = false;
   isAuthenticated: boolean = false;
   user:UserClaims;
-  claims: Array<Claim>;
 
   constructor(public oktaAuth: OktaAuthService) {
   }
@@ -29,9 +28,7 @@ export class HomeComponent implements OnInit {
     this.isAuthenticated = await this.oktaAuth.isAuthenticated();
     if( this.isAuthenticated ){
     this.user= await this.oktaAuth.getUser();
-    this.claims = Object.entries(this.user).map(entry => ({ claim: entry[0], value: entry[1] }));
     console.log(this.user.name);
-    console.log(this.claims);
     }
     // Subscribe to authentication state changes
     this.oktaAuth.$authenticationState.subscribe(
