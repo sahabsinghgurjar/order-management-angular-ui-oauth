@@ -1,0 +1,11 @@
+.header-container {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: DodgerBlue;
+    div {
+        width: 200px;
+        margin: 10px;
+        text-align: center;
+      }
+  }
+  
