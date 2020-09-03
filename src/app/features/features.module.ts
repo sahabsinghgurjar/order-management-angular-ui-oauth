@@ -8,13 +8,16 @@ import { RouterModule } from '@angular/router';
 import { FeaturesRoutingModule } from './features-routing.module';
 import { TableModule } from 'primeng/table';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
+import {MessagesModule} from 'primeng/messages';
+import {MessageModule} from 'primeng/message';
 
 
 
 @NgModule({
   declarations: [ UserSearchComponent, UserRegisterationComponent, ProductSearchComponent, ProductRegisterationComponent, OrderSearchComponent],
   imports: [
-    RouterModule,FeaturesRoutingModule,TableModule ,CommonModule
+    RouterModule,FeaturesRoutingModule,TableModule ,CommonModule,ReactiveFormsModule,MessagesModule,MessageModule
   ],schemas: [
     CUSTOM_ELEMENTS_SCHEMA,
     NO_ERRORS_SCHEMA

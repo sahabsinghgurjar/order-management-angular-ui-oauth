@@ -1,5 +1,6 @@
 export class AppUser{
-    name:string;
+    firstName:string;
+    lastName:string;
     userId:string;
     email:string;
     phone:number;

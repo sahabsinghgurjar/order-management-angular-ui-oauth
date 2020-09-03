@@ -1,1 +1,54 @@
-<p>user-registeration works!</p>
+<div class="form-container">
+    <p-messages ></p-messages>
+<form [formGroup]="userRegisterFormGroup" (ngSubmit)="onSubmit()">
+
+    <div class="form-row">
+        <div class="form-column">
+            <label>
+           User Id:
+            <input type="text" formControlName="userId">
+            </label>
+        </div>
+    </div>
+
+  <div class="form-row">
+    <div class="form-column">
+        <label>
+        First Name:
+        <input type="text" formControlName="firstName">
+        </label>
+    </div>
+    <div class="form-column">
+        <label>
+        Last Name:
+        <input type="text" formControlName="lastName">
+        </label>
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-column">
+        <label>
+        Email:
+        <input type="text" formControlName="email">
+        </label>
+    </div>
+    <div class="form-column">
+        <label>
+       Phone:
+        <input type="text" formControlName="phone">
+        </label>
+    </div>
+</div>
+
+<div class="form-row">
+    <div class="form-column">
+        <label>
+        Address:
+        <input type="text" formControlName="address">
+        </label>
+    </div>
+</div>
+  
+    <button type="submit" [disabled]="!userRegisterFormGroup.valid">Submit</button>
+  </form>
+</div>

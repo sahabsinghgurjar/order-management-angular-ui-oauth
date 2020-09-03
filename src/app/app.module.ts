@@ -16,6 +16,7 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { OKTA_CONFIG, OktaAuthModule } from '@okta/okta-angular';
 import { AuthInterceptor } from './shared/okta/auth.interceptor';
 import { RouterModule } from '@angular/router';
+import { MessageService } from 'primeng/api';
 
 const oktaConfig = {
   issuer: 'https://dev-676339.okta.com/oauth2/default',
@@ -43,7 +44,7 @@ const oktaConfig = {
   ],
   providers: [
     { provide: OKTA_CONFIG, useValue: oktaConfig },
-    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },MessageService
   ],
   bootstrap: [AppComponent]
 })

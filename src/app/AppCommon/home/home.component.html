@@ -1,13 +1,17 @@
 
 <div class="header-container ">
-    <div>Order Management</div>
-    <div>User: {{ user.name}}</div>
+         <div class="menu-bar header-column">  <p-menubar [model]="items"></p-menubar></div>
+         <div class="header-column">Order Management</div>
+        <div class="login-info header-column">
+           <div class="user-name"> User: {{loggedInUser}}</div>
+            <button *ngIf="!isAuthenticated" (click)="oktaAuth.loginRedirect()">Login</button>
+            <button *ngIf="isAuthenticated" (click)="oktaAuth.logout()">Logout</button>
+        </div>
 <div>
     
-    <button *ngIf="!isAuthenticated" (click)="oktaAuth.loginRedirect()">Login</button>
-    <button *ngIf="isAuthenticated" (click)="oktaAuth.logout()">Logout</button>
+    
 </div>
 </div>
-<p-menubar [model]="items"></p-menubar>
+
 <router-outlet></router-outlet>
 

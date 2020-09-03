@@ -7,11 +7,14 @@ import { AppCommonRoutingModule } from './app-common-routing.module';
 import { FeaturesModule } from '../features/features.module';
 import { CommonModule } from '@angular/common';
 
+import {MessagesModule} from 'primeng/messages';
+import {MessageModule} from 'primeng/message';
+
 
 @NgModule({
   declarations: [HomeComponent],
   imports: [
-    MenubarModule,RouterModule,MenuModule,AppCommonRoutingModule,FeaturesModule,CommonModule
+    MenubarModule,RouterModule,MenuModule,AppCommonRoutingModule,FeaturesModule,CommonModule,MessagesModule,MessageModule
     
   ] ,schemas: [
     CUSTOM_ELEMENTS_SCHEMA,

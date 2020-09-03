@@ -16,14 +16,13 @@ export class UserService {
      return this.http.get<AppUser[]>(UserService.USER_SEARCH_URL+'all').pipe(
        catchError(this.handleError)
      );
-    /*
-const appuser=new AppUser();
-appuser.name='sahab';
-appuser.email="testemail@ymail.com";
-appuser.phone=66988988;
-appuser.userId="estUserId";
-    return of([].concat(appuser));
-    */
+    
+  }
+
+  registerUser(appUser:AppUser){
+    return this.http.post(UserService.USER_SEARCH_URL+'register',appUser, {responseType: 'text'}).pipe(
+      catchError(this.handleError)
+    );
   }
 
 

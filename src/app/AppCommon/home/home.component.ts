@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
   value:any;
   public isLoggedIn = false;
   isAuthenticated: boolean = false;
-  user:UserClaims;
+  loggedInUser:string;
 
   constructor(public oktaAuth: OktaAuthService) {
   }
@@ -27,8 +27,7 @@ export class HomeComponent implements OnInit {
     async   ngOnInit() {
     this.isAuthenticated = await this.oktaAuth.isAuthenticated();
     if( this.isAuthenticated ){
-    this.user= await this.oktaAuth.getUser();
-    console.log(this.user.name);
+    this.loggedInUser=( await this.oktaAuth.getUser()).name;
     }
     // Subscribe to authentication state changes
     this.oktaAuth.$authenticationState.subscribe(

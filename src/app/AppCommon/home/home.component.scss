@@ -2,10 +2,19 @@
     display: flex;
     flex-wrap: nowrap;
     background-color: DodgerBlue;
-    div {
+    .header-column {
         width: 200px;
         margin: 10px;
         text-align: center;
+        flex-grow: 1
+       
       }
+      &.menu-bar {
+        flex-grow: 4
+    }
+    ::ng-deep.ui-menubar {
+        background-color: DodgerBlue;
+        border-color:  DodgerBlue;
+    }
   }
   

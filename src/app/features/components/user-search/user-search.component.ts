@@ -20,7 +20,9 @@ export class UserSearchComponent implements OnInit {
 
       this.cols = [
           { field: 'userId', header: 'User Id' },
-          { field: 'name', header: 'Name' },
+          { field: 'firstName', header: 'First Name' },
+          { field: 'lastName', header: 'Last Name' },
+          { field: 'address', header: 'Address' },
           { field: 'email', header: 'Email' },
           { field: 'phone', header: 'Phone' }
       ];
