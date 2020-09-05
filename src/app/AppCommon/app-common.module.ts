@@ -9,12 +9,14 @@ import { CommonModule } from '@angular/common';
 
 import {MessagesModule} from 'primeng/messages';
 import {MessageModule} from 'primeng/message';
+import { LoaderComponent } from './loaderComponent/loader/loader.component';
+import {ProgressSpinnerModule} from 'primeng/progressspinner';
 
 
 @NgModule({
-  declarations: [HomeComponent],
+  declarations: [HomeComponent, LoaderComponent],
   imports: [
-    MenubarModule,RouterModule,MenuModule,AppCommonRoutingModule,FeaturesModule,CommonModule,MessagesModule,MessageModule
+    MenubarModule,RouterModule,MenuModule,AppCommonRoutingModule,FeaturesModule,CommonModule,MessagesModule,MessageModule,ProgressSpinnerModule
     
   ] ,schemas: [
     CUSTOM_ELEMENTS_SCHEMA,

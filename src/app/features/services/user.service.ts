@@ -13,33 +13,26 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
   getAllUsers():Observable<AppUser[]>{
-     return this.http.get<AppUser[]>(UserService.USER_SEARCH_URL+'all').pipe(
-       catchError(this.handleError)
-     );
-    
+     return this.http.get<AppUser[]>(UserService.USER_SEARCH_URL+'all');
   }
 
+  getUser(userId:string):Observable<AppUser>{
+    return this.http.get<AppUser>(UserService.USER_SEARCH_URL+'myUser/'+userId);
+ }
+
+  deleteUser(appUser:AppUser){
+    return this.http.put(UserService.USER_SEARCH_URL+"delete", appUser,{responseType: 'text'});
+
+
+  }
+  updateUser(appUser:AppUser){
+    return this.http.put(UserService.USER_SEARCH_URL+'update',appUser, {responseType: 'text'});
+
+
+  }
   registerUser(appUser:AppUser){
-    return this.http.post(UserService.USER_SEARCH_URL+'register',appUser, {responseType: 'text'}).pipe(
-      catchError(this.handleError)
-    );
-  }
+    return this.http.post(UserService.USER_SEARCH_URL+'register',appUser, {responseType: 'text'});
 
 
-
-  private handleError(error: HttpErrorResponse) {
-    if (error.error instanceof ErrorEvent) {
-      // A client-side or network error occurred. Handle it accordingly.
-      console.error('An error occurred:', error.error.message);
-    } else {
-      // The backend returned an unsuccessful response code.
-      // The response body may contain clues as to what went wrong.
-      console.error(
-        `Backend returned code ${error.status}, ` +
-        `body was: ${error.error}`);
-    }
-    // Return an observable with a user-facing error message.
-    return throwError(
-      'Something bad happened; please try again later.');
   }
 }

@@ -1,4 +1,6 @@
 
+<app-loader></app-loader>
+
 <div class="header-container ">
          <div class="menu-bar header-column">  <p-menubar [model]="items"></p-menubar></div>
          <div class="header-column">Order Management</div>
@@ -7,10 +9,7 @@
             <button *ngIf="!isAuthenticated" (click)="oktaAuth.loginRedirect()">Login</button>
             <button *ngIf="isAuthenticated" (click)="oktaAuth.logout()">Logout</button>
         </div>
-<div>
-    
-    
-</div>
+
 </div>
 
 <router-outlet></router-outlet>

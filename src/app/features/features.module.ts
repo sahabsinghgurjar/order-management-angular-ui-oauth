@@ -11,13 +11,14 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MessagesModule} from 'primeng/messages';
 import {MessageModule} from 'primeng/message';
+import {ButtonModule} from 'primeng/button';
 
 
 
 @NgModule({
   declarations: [ UserSearchComponent, UserRegisterationComponent, ProductSearchComponent, ProductRegisterationComponent, OrderSearchComponent],
   imports: [
-    RouterModule,FeaturesRoutingModule,TableModule ,CommonModule,ReactiveFormsModule,MessagesModule,MessageModule
+    RouterModule,FeaturesRoutingModule,TableModule ,CommonModule,ReactiveFormsModule,MessagesModule,MessageModule,ButtonModule
   ],schemas: [
     CUSTOM_ELEMENTS_SCHEMA,
     NO_ERRORS_SCHEMA

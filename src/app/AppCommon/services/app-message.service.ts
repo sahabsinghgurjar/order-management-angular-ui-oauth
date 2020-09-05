@@ -9,8 +9,14 @@ export class AppMessageService {
   constructor(private messageService: MessageService) {}
 
   addUserReisterSucessMsg(msg:any) {
+    this.messageService.clear();
     this.messageService.clear(this.USER_REGISTERATION);
     this.messageService.add({severity:'success', summary:'User Registeration.', detail:msg});
+}
+addUserReisterFailedMsg(msg:any) {
+  this.messageService.clear();
+  this.messageService.clear(this.USER_REGISTERATION);
+  this.messageService.add({severity:'error', summary:'User Registeration.', detail:msg});
 }
 
 }
