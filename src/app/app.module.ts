@@ -28,7 +28,7 @@ const oktaConfig = {
  //redirectUri:'http://localhost:4200/orderManagement/home',
 // post_logout_redirect_uri:'http://localhost:4200/orderManagement/home/logout',
   clientId: '0oau6kwt7fXnMRA904x6',
-  scopes: ['read','profile','openid']
+  scopes: ['read','profile','openid','groups']
 };
 
 @NgModule({
