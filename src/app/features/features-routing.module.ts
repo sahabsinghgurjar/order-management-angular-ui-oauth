@@ -4,9 +4,9 @@ import { UserSearchComponent } from './components/user-search/user-search.compon
 import { UserRegisterationComponent } from './components/user-registeration/user-registeration.component';
 import { ProductSearchComponent } from './components/product-search/product-search.component';
 import { ProductRegisterationComponent } from './components/product-registeration/product-registeration.component';
-import { OrderSearchComponent } from './components/order-search/order-search.component';
 import { CommonModule } from '@angular/common';
 import {OktaAuthGuard } from  '@okta/okta-angular';
+import { OrderFormComponent } from './components/order-form/order-form.component';
 
 
 
@@ -22,6 +22,9 @@ const routes: Routes = [
 
 },{ path: 'productAdd', component:ProductRegisterationComponent,
     canActivate: [OktaAuthGuard]
+
+}, { path: 'orderForm', component:OrderFormComponent,
+canActivate: [OktaAuthGuard]
 
 },
 ];

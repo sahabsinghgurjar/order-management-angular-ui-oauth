@@ -9,6 +9,11 @@
         "secure": false,
         "logLevel": "debug"
     },
+    "/orderProducer/*": {
+        "target": "http://localhost:8083",
+        "secure": false,
+        "logLevel": "debug"
+    },
     "/auth/*": {
         "target": "http://localhost:8081",
         "secure": false,

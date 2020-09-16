@@ -51,7 +51,12 @@ export class HomeComponent implements OnInit {
                 {label: 'Search', routerLink: ['feature/productSearch']},
                 {label: 'Add', routerLink: ['feature/productAdd']}
             ]
-        }
+        },{
+          label: 'Order',
+          items: [
+              {label: 'New', routerLink: ['feature/orderForm']}
+          ]
+      }
     ];
 }
 

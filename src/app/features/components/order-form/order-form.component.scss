@@ -1,0 +1,12 @@
+.form-row {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-top: 10px;
+    .form-column{
+        padding-right: 10px;
+    }
+  }
+
+  .form-container{
+      padding: 50px;
+  }

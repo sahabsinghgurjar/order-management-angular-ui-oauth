@@ -12,11 +12,12 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {MessagesModule} from 'primeng/messages';
 import {MessageModule} from 'primeng/message';
 import {ButtonModule} from 'primeng/button';
+import { OrderFormComponent } from './components/order-form/order-form.component';
 
 
 
 @NgModule({
-  declarations: [ UserSearchComponent, UserRegisterationComponent, ProductSearchComponent, ProductRegisterationComponent, OrderSearchComponent],
+  declarations: [ UserSearchComponent, UserRegisterationComponent, ProductSearchComponent, ProductRegisterationComponent, OrderSearchComponent, OrderFormComponent],
   imports: [
     RouterModule,FeaturesRoutingModule,TableModule ,CommonModule,ReactiveFormsModule,MessagesModule,MessageModule,ButtonModule
   ],schemas: [
