@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "startaws": "ng serve -c=aws --proxy-config=src/aws-proxy.conf.json",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
