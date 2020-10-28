@@ -20,16 +20,7 @@ import { MessageService } from 'primeng/api';
 import {ButtonModule} from 'primeng/button';
 import { ProgressInterceptor } from './shared/progress.interceptor';
 import {ProgressSpinnerModule} from 'primeng/progressspinner';
-
-const oktaConfig = {
-  issuer: 'https://dev-676339.okta.com/oauth2/default',
-  //redirectUri: window.location.origin + '/callback',
-  redirectUri:'http://localhost:4200/callback',
- //redirectUri:'http://localhost:4200/orderManagement/home',
-// post_logout_redirect_uri:'http://localhost:4200/orderManagement/home/logout',
-  clientId: '0oau6kwt7fXnMRA904x6',
-  scopes: ['read','profile','openid','groups']
-};
+import {environment} from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -46,7 +37,7 @@ const oktaConfig = {
     AppRoutingModule,DropdownModule,InputMaskModule,RouterModule,MenubarModule,HttpClientModule,TableModule,ButtonModule,ProgressSpinnerModule
   ],
   providers: [
-    { provide: OKTA_CONFIG, useValue: oktaConfig },
+    { provide: OKTA_CONFIG, useValue: environment.oktaConfig },
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ProgressInterceptor, multi: true },
     MessageService

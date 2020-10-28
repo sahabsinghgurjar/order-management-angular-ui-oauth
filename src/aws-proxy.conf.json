@@ -1,21 +1,21 @@
 {
     "/api/*": {
-        "target": "http://ec2-3-128-91-146.us-east-2.compute.amazonaws.com",
+        "target": "https://orderapp.neighborhoodexpo.com",
         "secure": false,
         "logLevel": "debug"
     },
     "/orderApp/*": {
-        "target": "http://ec2-3-128-91-146.us-east-2.compute.amazonaws.com/",
+        "target": "https://orderapp.neighborhoodexpo.com/",
         "secure": false,
         "logLevel": "debug"
     },
     "/orderProducer/*": {
-        "target": "http://ec2-3-128-91-146.us-east-2.compute.amazonaws.com/",
+        "target": "https://orderapp.neighborhoodexpo.com/",
         "secure": false,
         "logLevel": "debug"
     },
     "/auth/*": {
-        "target": "http://ec2-3-128-91-146.us-east-2.compute.amazonaws.com/",
+        "target": "https://orderapp.neighborhoodexpo.com/",
         "secure": false,
         "logLevel": "debug"
     }

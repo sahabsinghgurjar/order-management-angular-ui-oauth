@@ -4,12 +4,13 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 import { of } from 'rxjs';
+import {environment} from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-  static readonly    USER_SEARCH_URL:string="/orderApp/user/";
+  static readonly    USER_SEARCH_URL:string=environment.appBaseUrl+"/orderApp/user/";
 
   constructor(private http: HttpClient) { }
   getAllUsers():Observable<AppUser[]>{
